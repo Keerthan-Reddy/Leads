@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Form with Firebase</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="dataForm">
+        <label for="mapsLink">Maps Link:</label>
+        <input type="text" id="mapsLink" name="mapsLink" required />
+
+        <label for="placeName">Name of the Place:</label>
+        <input type="text" id="placeName" name="placeName" required />
+
+        <label for="contactNumber">Contact Number:</label>
+        <input
+          type="tel"
+          id="contactNumber"
+          name="contactNumber"
+          pattern="[0-9]{10}"
+          required
+        />
+
+        <label for="internName">Intern Name:</label>
+        <select id="internName" name="internName" required>
+          <option value="Intern1">Intern 1</option>
+          <option value="Intern2">Intern 2</option>
+          <!-- Add more options as needed -->
+        </select>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-database.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
